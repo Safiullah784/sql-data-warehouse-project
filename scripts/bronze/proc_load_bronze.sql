@@ -1,25 +1,25 @@
-/* =========================================================
-   Script Purpose
-   =========================================================
-   Purpose: Creates or replaces the stored procedure
-            bronze.load_bronze, which performs the raw-data
-            load from CRM and ERP CSV source files into the
-            existing bronze tables.
+/* ================================================================
+   Stored Procedure: Load Bronze Layer (Source - > Bronze)
+   ================================================================
+   Script Purpose: Creates or replaces the stored procedure
+                   bronze.load_bronze, which performs the raw-data
+                   load from CRM and ERP CSV source files into the
+                   existing bronze tables.
 
-            Key actions:
-            • Truncates each bronze table before loading.
-            • Uses BULK INSERT to import data from the
-              defined file paths.
-            • Prints row counts and step durations for
-              simple performance logging.
-            • Wraps all operations in TRY/CATCH for basic
-              error reporting and re-throwing.
+                   Key actions:
+                   • Truncates each bronze table before loading.
+                   • Uses BULK INSERT to import data from the
+                     defined file paths.
+                   • Prints row counts and step durations for
+                     simple performance logging.
+                   • Wraps all operations in TRY/CATCH for basic
+                     error reporting and re-throwing.
 
    Usage:   Execute this script once to create or update the
             procedure. After that, run:
                 EXEC bronze.load_bronze;
             whenever new source files need to be ingested.
-   =========================================================
+   ================================================================
 */
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze

@@ -1,6 +1,7 @@
 /* =====================================================================================
    Script Purpose:
-   This stored procedure loads data from the silver layer. 
+   This stored procedure loads data from bronze layer into the silver layer using 
+   ETL(Extract, Transform, Load) process. 
    It applies data cleaning, standardization, and conforming rules such as:
      - Removing duplicates and keeping latest records
      - Trimming whitespace

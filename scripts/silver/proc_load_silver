@@ -1,4 +1,6 @@
 /* =====================================================================================
+   Stored Procedure: Load Bronze Layer (Source - > Bronze)
+   =====================================================================================
    Script Purpose:
    This stored procedure loads data from bronze layer into the silver layer using 
    ETL(Extract, Transform, Load) process. 
